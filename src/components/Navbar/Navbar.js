@@ -8,6 +8,8 @@ import { getCartTotal } from "../../store/cartSlice";
 const Navbar = () => {
   const dispatch = useDispatch();
   const { data: categories } = useSelector((state) => state.category);
+  console.log(categories);
+ 
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
