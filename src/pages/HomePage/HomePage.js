@@ -2,9 +2,9 @@ import React,{useEffect} from "react";
 import "./HomePage.scss";
 import Slider from "../../components/Slider/Slider";
 import Category from '../../components/Category/Category';
-import ProductList from '../../components/ProductList/ProductList';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCategories, fetchProductsByCategory } from '../../store/categorySlice';
+import SingleCategory from "../../components/SingleCategory/SingleCategory";
 
 
 const HomePage = () => {
@@ -23,6 +23,9 @@ const HomePage = () => {
     <div className="home-page">
       <Slider />
       <Category categories = {categories} status = {categoryStatus} />
+      <section>
+        { productsByCategory[0] && <SingleCategory products = {productsByCategory[0]} status = {catProductAllStatus} /> }
+      </section>
     </div>
   );
 };
