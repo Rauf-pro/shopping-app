@@ -10,7 +10,7 @@ import SingleProduct from "../SingleProduct/SingleProduct";
 
 const SingleCategory = ({ products, status }) => {
   const dispatch = useDispatch();
-  const isModalVisible = useSelector((state) => state.modal);
+  const {isModalVisible} = useSelector((state) => state.modal);
 
   const viewModalHandler = (data) => {
     dispatch(setModalData(data));
