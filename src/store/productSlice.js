@@ -14,7 +14,7 @@ const productSlice = createSlice({
       state.data = action.payload;
     },
     setStatus(state, action) {
-      state.data = action.payload;
+      state.status = action.payload;
     },
   },
 });
@@ -28,6 +28,7 @@ export const fetchProducts = () => {
     try {
       const response = await fetch(`${BASE_URL}products`);
       const data = await response.json();
+      console.log(data);
       dispatch(setProducts(data));
       dispatch(setStatus(STATUS.IDLE));
     } catch (error) {
