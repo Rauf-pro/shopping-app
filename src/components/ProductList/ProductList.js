@@ -9,7 +9,6 @@ import Loader from "../Loader/Loader";
 import Error from "../Error/Error";
 
 const ProductList = ({ products, status }) => {
-  console.log(products);
   const dispatch = useDispatch();
   const { isModalVisible } = useSelector((state) => state.modal);
 
