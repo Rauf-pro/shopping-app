@@ -7,14 +7,12 @@ import { fetchCategories } from "../../store/categorySlice";
 const Navbar = () => {
   const dispatch = useDispatch();
   const { data: categories } = useSelector((state) => state.category);
-  console.log(categories);
  
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     dispatch(fetchCategories());
-    
   }, []);
 
   return (
@@ -60,7 +58,11 @@ const Navbar = () => {
               </button>
               {categories.map((category) => (
                 <li key={category.id}>
-                  <Link to={`/category/${category.id}`} className="nav-link text-white" onClick={() => setIsSidebarOpen(false)}>
+                  <Link
+                    to={`/category/${category.id}`}
+                    className="nav-link text-white"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
                     {category.name}
                   </Link>
                 </li>
