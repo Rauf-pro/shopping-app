@@ -44,6 +44,9 @@ const HomePage = () => {
           />
         )}
       </section>
+      <section>
+        { productsByCategory[1] && <SingleCategory products = {productsByCategory[1]} status = {catProductAllStatus} /> }
+      </section>
     </div>
   );
 };
