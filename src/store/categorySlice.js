@@ -9,8 +9,8 @@ const categorySlice = createSlice({
     status: STATUS.IDLE,
     catProductAll: [],
     catProductAllStatus: STATUS.IDLE,
-    catPrductSingle: [],
-    catPrductSingleStatus: STATUS.IDLE,
+    catProductSingle: [],
+    catProductSingleStatus: STATUS.IDLE,
   },
 
   reducers: {
