@@ -10,6 +10,7 @@ const CategoryPage = () => {
     const {id} = useParams();
     const {catProductSingle: products, catProductSingleStatus: status} = useSelector((state) => state.category);
     console.log(products)
+    console.log(status)
 
     useEffect(() => {
       dispatch(fetchProductsByCategory(id, 'single'));
